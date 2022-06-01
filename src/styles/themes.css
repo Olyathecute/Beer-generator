@@ -1,0 +1,10 @@
+:root {
+  --background-color-dark: rgb(28, 30, 33);
+  --font-color-dark: rgb(216, 221, 234);
+
+  --background-color-light: rgb(216, 221, 234);
+  --font-color-light: rgb(28, 30, 33);
+
+  --background-color: var(--background-color-light);
+  --font-color: var(--font-color-light);
+}

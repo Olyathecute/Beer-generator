@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+@mixin switch($on, $off) {
+  label:after {
+    content: $on;
+    font-size: 0.8rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border-radius: 45px;
+    transition: 0.3s;
+  }
+
+  input:checked + label:after {
+    transform: translateX(100%);
+    background: white;
+    content: $off;
+  }
+}
+
+.switch {
+  margin: 1rem;
+  color: $color-theme-light;
+  .content {
+    position: relative;
+
+    .textOff {
+      position: absolute;
+      padding: 0 5px;
+      top: 0.7rem;
+      right: 0;
+      font-size: 0.6rem;
+    }
+
+    .textOn {
+      position: absolute;
+      padding: 0 5px;
+      top: 0.7rem;
+      font-size: 0.6rem;
+    }
+  }
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    width: 4rem;
+    height: 2rem;
+    display: block;
+    background: $yellow-color;
+    border-radius: 2rem;
+    border: 1px solid $border-color;
+    position: relative;
+    padding: 0.2rem;
+  }
+
+  // .lang {
+  //   @include switch('Ru', 'En');
+  // }
+
+  // .theme {
+  //   @include switch('Light', 'Dark');
+  // }
+
+  .lang {
+    @include switch('', '');
+  }
+
+  .theme {
+    @include switch('', '');
+  }
+
+  input:checked + label {
+    background: $blue-color;
+  }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import User from './components/User/User'
+import BeerInfo from './components/Beer/BeerInfo'
+import Header from './components/Header/Header'
+import Loader from './components/Loader/Loader'
+import style from './App.module.scss'
 
-function App() {
+export default function App() {
+  const [user, setUser] = useState()
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios('https://random-data-api.com/api/users/random_user')
+      setUser(result.data)
+    }
+    fetchData()
+  }, [])
+
+  if (!user) return <Loader />
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.wrapper}>
+      <Header />
+      <div className={style.info}>
+        <User user={user} />
+        <BeerInfo />
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
