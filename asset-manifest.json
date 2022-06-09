@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Beer-generator/static/css/main.a7dea9b6.css",
-    "main.js": "/Beer-generator/static/js/main.1e612588.js",
+    "main.js": "/Beer-generator/static/js/main.53e39af4.js",
     "index.html": "/Beer-generator/index.html",
     "main.a7dea9b6.css.map": "/Beer-generator/static/css/main.a7dea9b6.css.map",
-    "main.1e612588.js.map": "/Beer-generator/static/js/main.1e612588.js.map"
+    "main.53e39af4.js.map": "/Beer-generator/static/js/main.53e39af4.js.map"
   },
   "entrypoints": [
     "static/css/main.a7dea9b6.css",
-    "static/js/main.1e612588.js"
+    "static/js/main.53e39af4.js"
   ]
 }
