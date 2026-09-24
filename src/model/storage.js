@@ -6,7 +6,6 @@ export const storage = {
   },
   getItem: name => {
     const item = localStorage.getItem(prefix(name))
-    console.log(item)
     if (item) {
       return JSON.parse(item)
     }

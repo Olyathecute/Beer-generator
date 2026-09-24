@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.bigGap {
+  gap: 1.5em;
+}
+
+.smallGap {
+  gap: 0.5em;
+}
+
+.photo_container {
+  margin: 0 auto;
+  position: relative;
+  width: 45%;
+
+  .photo {
+    height: 30vh;
+  }
+}
+
+.transparent {
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 1rem;
+  margin: 1rem 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
